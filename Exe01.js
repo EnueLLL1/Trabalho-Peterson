@@ -6,7 +6,7 @@ const readlineSync = require("readline-sync");
 const input = readlineSync.question("Digite um número: ");
 const number = parseFloat(input);
 
-// Validate input
+// VALIDAÇÃO DO INPUT
 if (isNaN(number)) {
   console.log("Por favor, digite um número válido.");
 } else {
@@ -14,11 +14,5 @@ if (isNaN(number)) {
 }
 
 function checkNumber(num) {
-  if (num === 0) {
-    return "É ZERO";
-  } else if (num > 0) {
-    return "É POSITIVO";
-  } else {
-    return "É NEGATIVO";
-  }
+  return num > 0 ? "É POSITIVO" : num < 0 ? "É NEGATIVO" : "NÚMERO IGUAL A 0";
 }
